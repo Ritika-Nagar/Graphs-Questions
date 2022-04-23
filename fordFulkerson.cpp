@@ -71,6 +71,7 @@ int finfMaxFlow(int graph[V][V], int s, int t){
             rGraph[u][v]-=path_flow;
             rGraph[v][u] += path_flow;
         }
+        maxFlow += path_flow;
  }
     return maxFlow;
     
