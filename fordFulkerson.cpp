@@ -21,14 +21,14 @@ bool bfs( int rGraph[V][V] , int s, int t, int parent[]){
         q.pop;
 
         for(int v=0; v<V; v++){
-            if(visited==false && rGraph[u][v] >0){// we always want our residual capacity to be more than zero
+            if(visited[v]==false && rGraph[u][v] >0){// we always want our residual capacity to be more than zero
 
                 if(v==t){// agar aise krte krte , we have reached our target node
                     parent[v] =u;
                     return true;
                 }
 
-                q.push();
+                q.push(v);
                 parent[v]=u;
                 visited[v]=true;
                 
